@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hero"><div class="container">
+    <span class="badge">AI + NLP + Full Stack</span>
+    <h1>AI Resume Analyzer</h1>
+    <p>Upload a resume and compare it with a job description to get an ATS-style score, matching skills, missing skills, and practical improvement suggestions.</p>
+  </div></header>
+  <main class="container">
+    <section class="card">
+      <h2>Analyze Resume</h2>
+      <form id="resumeForm">
+        <div class="grid">
+          <div>
+            <label for="resume">Resume PDF/DOCX</label>
+            <input id="resume" name="resume" type="file" accept=".pdf,.docx" required>
+            <small>Maximum recommended size: 5 MB.</small>
+          </div>
+          <div>
+            <label for="job_description">Job Description</label>
+            <textarea id="job_description" name="job_description" rows="12" placeholder="Paste the complete job description here..." required></textarea>
+          </div>
+        </div>
+        <button id="analyzeBtn" type="submit">Analyze Resume</button>
+      </form>
+      <div id="message" class="message hidden"></div>
+    </section>
+    <section id="results" class="hidden">
+      <div class="card"><div class="score-row">
+        <div><p class="eyebrow">ATS-STYLE SCORE</p><div id="score" class="score">0%</div></div>
+        <div id="scoreText" class="score-text"></div>
+      </div></div>
+      <div class="result-grid">
+        <div class="card"><h3>Matching Skills</h3><div id="matchingSkills" class="chips"></div></div>
+        <div class="card"><h3>Missing Skills</h3><div id="missingSkills" class="chips"></div></div>
+      </div>
+      <div class="card"><h3>Resume Sections Detected</h3><div id="sections" class="section-list"></div></div>
+      <div class="card"><h3>Improvement Suggestions</h3><ul id="suggestions" class="suggestions"></ul></div>
+    </section>
+  </main>
+  <footer><p>AI Resume Analyzer • Flask • NLP • TF-IDF • SQLite</p></footer>
+  <script src="/script.js"></script>
+</body>
+</html>

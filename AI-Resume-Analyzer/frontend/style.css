@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; background: #f5f7fb; color: #172033; }
+.container { width: min(1100px, 92%); margin: auto; }
+.hero { padding: 55px 0; background: #172033; color: white; }
+.hero h1 { margin: 12px 0; font-size: clamp(2rem, 5vw, 3.4rem); }
+.hero p { max-width: 760px; line-height: 1.7; color: #dce3f1; }
+.badge { display: inline-block; padding: 7px 12px; border: 1px solid #66718a; border-radius: 999px; font-size: 13px; }
+.card { background: white; margin: 24px 0; padding: 28px; border-radius: 16px; box-shadow: 0 8px 30px rgba(23,32,51,.08); }
+.grid, .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+label { display: block; font-weight: 700; margin-bottom: 8px; }
+input[type=file], textarea { width: 100%; border: 1px solid #ccd3df; border-radius: 10px; padding: 12px; background: white; }
+textarea { resize: vertical; } small { display: block; color: #687386; margin-top: 7px; }
+button { margin-top: 22px; border: 0; border-radius: 10px; padding: 13px 22px; background: #315efb; color: white; font-size: 16px; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .65; cursor: wait; }
+.message { margin-top: 15px; padding: 12px; border-radius: 10px; background: #fff3cd; }
+.hidden { display: none !important; }
+.score-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.eyebrow { color: #687386; font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+.score { font-size: 60px; font-weight: 900; }
+.score-text { max-width: 500px; color: #526078; line-height: 1.6; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: #eef2ff; color: #2d46a6; border-radius: 999px; padding: 7px 11px; font-size: 13px; font-weight: 700; }
+.chip.missing { background: #fff0f0; color: #b33a3a; }
+.section-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.section-item { padding: 14px; border-radius: 10px; background: #f1f4f8; font-weight: 700; }
+.section-item.ok { background: #eaf8ef; color: #18733b; } .section-item.no { background: #fff0f0; color: #a63232; }
+.suggestions { line-height: 1.8; } footer { text-align: center; padding: 25px; color: #687386; }
+@media (max-width:760px) { .grid,.result-grid { grid-template-columns:1fr; } .section-list { grid-template-columns:1fr 1fr; } .score-row { flex-direction:column; align-items:flex-start; } }
